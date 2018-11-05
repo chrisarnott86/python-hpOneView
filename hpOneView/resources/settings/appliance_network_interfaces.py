@@ -50,5 +50,4 @@ class ApplianceNetworkInformation(object):
         """
         uri = self.URI
         return self._client.get(uri)
-        
-return self._client.get(uri)
+       
