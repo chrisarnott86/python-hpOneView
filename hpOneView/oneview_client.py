@@ -193,6 +193,7 @@ class OneViewClient(object):
         self.__users = None
         self.__appliance_time_and_locale_configuration = None
         self.__appliance_node_information = None
+        self.__appliance_network_information = None
         self.__versions = None
         self.__backups = None
         self.__login_details = None
