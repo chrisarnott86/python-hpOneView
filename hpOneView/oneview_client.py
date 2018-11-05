@@ -107,6 +107,7 @@ from hpOneView.resources.security.login_details import LoginDetails
 from hpOneView.resources.security.roles import Roles
 from hpOneView.resources.security.users import Users
 from hpOneView.resources.settings.appliance_node_information import ApplianceNodeInformation
+from hpOneView.resources.settings.appliance_network_information import ApplianceNetworkInformation
 from hpOneView.resources.settings.appliance_time_and_locale_configuration import ApplianceTimeAndLocaleConfiguration
 from hpOneView.resources.settings.versions import Versions
 
@@ -192,6 +193,7 @@ class OneViewClient(object):
         self.__users = None
         self.__appliance_time_and_locale_configuration = None
         self.__appliance_node_information = None
+        self.__appliance_network_information = None
         self.__versions = None
         self.__backups = None
         self.__login_details = None
@@ -1128,6 +1130,18 @@ class OneViewClient(object):
         if not self.__appliance_node_information:
             self.__appliance_node_information = ApplianceNodeInformation(self.__connection)
         return self.__appliance_node_information
+
+    @property
+    def appliance_network_information(self):
+        """
+        Gets the ApplianceNetworkInformation API client.
+
+        Returns:
+            ApplianceNetworkInformation:
+        """
+        if not self.__appliance_network_information:
+            self.__appliance_network_information = ApplianceNetworkInformation(self.__connection)
+        return self.__appliance_network_information
 
     @property
     def appliance_time_and_locale_configuration(self):
