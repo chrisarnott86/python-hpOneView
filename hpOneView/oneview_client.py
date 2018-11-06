@@ -1131,7 +1131,6 @@ class OneViewClient(object):
             self.__appliance_node_information = ApplianceNodeInformation(self.__connection)
         return self.__appliance_node_information
 
-    
     @property
     def appliance_network_information(self):
         """
@@ -1143,7 +1142,7 @@ class OneViewClient(object):
         if not self.__appliance_network_information:
             self.__appliance_network_information = ApplianceNetworkInformation(self.__connection)
         return self.__appliance_network_information
-    
+
     @property
     def appliance_time_and_locale_configuration(self):
         """
