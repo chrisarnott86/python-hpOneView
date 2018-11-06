@@ -33,7 +33,7 @@ standard_library.install_aliases()
 from hpOneView.resources.resource import ResourceClient
 
 
-class ApplianceNetworkInformation(object):
+class ApplianceNetworkInterfaces(object):
     """
     ApplianceNetworkInformation API client.
     """
